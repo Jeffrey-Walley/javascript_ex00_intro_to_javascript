@@ -185,3 +185,56 @@ const y = 10;
 if (x > 5 || y > 10) {
     console.log('x is greater than 5 or y is more than 10');
 } */
+
+/* const x = 10;
+const color = x > 10 ? 'red' : 'blue'
+
+console.log(color); */ // will console log "blue"
+
+/* const x = 10;
+const color = x > 10 ? 'red' : 'blue';
+switch (color) {
+    case 'red':
+        console.log('color is red');
+        break;
+    case 'blue':
+        console.log('color is blue');
+        break;
+    default:
+        console.log('color is Not red or blue');
+        break;
+} */ // color is blue
+
+//FUNCTIONS
+
+/* function addNums(num1, num2) {
+    return num1 + num2;
+}
+console.log(addNums(7, 5)); */ //will console.log 12
+
+// ARROW Functions
+
+/* const addNums = (num1, num2) => {
+    return num1 + num2;
+}
+console.log(addNums(4, 5)); */ // console.log: 9
+
+/* const addNums = (num1, num2) => num1 + num2;
+console.log(addNums(4, 5)); */ // console.log also gives 9
+
+
+//Object Oriented Programming
+
+//construct with constructor
+
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = dob;
+}
+
+// instantiate object with constructor
+const person1 = new Person('Trelvyn', 'Martin-Walley', '02-02-2015');
+const person2 = new Person('Izzy', 'Walley', '03-15-2009');
+
+console.log(person1, person2.firstName);
