@@ -227,14 +227,98 @@ console.log(addNums(4, 5)); */ // console.log also gives 9
 
 //construct with constructor
 
+/*
 function Person(firstName, lastName, dob) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.dob = dob;
-}
+} */
 
 // instantiate object with constructor
+/* const person1 = new Person('Trelvyn', 'Martin-Walley', '02-02-2015');
+const person2 = new Person('Izzy', 'Walley', '03-15-2009');
+
+console.log(person1, person2.firstName); */ //console.log: 'Trelvyn', 'Martin-Walley', '02-02-2015', 'Izzy'
+
+
+/* function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+    this.getBirthYear = function() {
+        return this.dob.getFullYear();
+    }
+    this.getFullName = function() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+const person1 = new Person('Trelvyn', 'Martin-Walley', '02-02-2015');
+const person2 = new Person('Izzy', 'Walley', '03-15-2009');
+console.log(person1.getBirthYear()); // console.log: 2015
+console.log(person2.getFullName()); */ // console.log: Izzy Walley
+
+
+// BETTER WAY TO DO THIS IS WITH PROTOTYPES
+
+/* function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+
+}
+
+Person.prototype.getBirthYear = function() {
+    return this.dob.getFullYear();
+}
+
+Person.prototype.getFullName = function() {
+    return `${this.firstName} ${this.lastName}`;
+}
+
+const person1 = new Person('Trelvyn', 'Martin-Walley', '02-02-2015');
+const person2 = new Person('Izzy', 'Walley', '03-15-2009');
+console.log(person1.getBirthYear());
+console.log(person2.getFullName());
+console.log(person1); */
+
+/* function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+
+}
+
+Person.prototype.getBirthYear = function() {
+    return this.dob.getFullYear();
+}
+
+Person.prototype.getFullName = function() {
+    return `${this.firstName} ${this.lastName}`;
+} */
+
+// OOP with classes
+
+/* class Person {
+    constructor(firstName, lastName, dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+    }
+
+    getBirthYear() {
+        return this.dob.getFullYear();
+    }
+
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+// Instantiate Object
 const person1 = new Person('Trelvyn', 'Martin-Walley', '02-02-2015');
 const person2 = new Person('Izzy', 'Walley', '03-15-2009');
 
-console.log(person1, person2.firstName);
+console.log(person1.getFullName());
+console.log(person2.getBirthYear()); */ //console.log: same as above, but with classes (newer & cleaner)
+
+//DOM ()
